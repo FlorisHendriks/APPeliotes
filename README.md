@@ -1,2 +1,2 @@
 # APPeliotes
-Aplicatie voor de hockeyvereniging Appeliotes
+Applicatie voor de hockeyvereniging Apeliotes
