@@ -50,7 +50,7 @@ return (
     <Stack.Navigator>
       {userLogged == false ? (
         <>
-          <Stack.Screen name="Login GameLot" component={Login} />
+          <Stack.Screen name="Login Appeliotes" component={Login} />
         </>
       ) : (
         <>

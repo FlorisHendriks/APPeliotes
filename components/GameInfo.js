@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { TouchableOpacity, StyleSheet, Text, Image, View } from "react-native";
 import { TextInput as Input } from "react-native-paper";
 import { theme } from "../core/theme";
@@ -16,59 +16,39 @@ export default function GameInfo({
   time,
   date,
   navigation,
-  mode,
-  id,
-  isInvite
 }) {
   return (
     <TouchableOpacity
-      key={title + "_" + place + "_" + date + "_" + time}
-      style={isInvite ? styles.containerInvites : styles.container}
+      style={styles.container}
       onPress={() => {
-        navigation.navigate(
-          "Event",
-          {
-            title: title,
-            description: description,
-            participants: participants,
-            slots: slots,
-            image: image,
-            place: place,
-            time: time,
-            date: date,
-            id: id,
-            // navigation: navigation,
-          },
-          (navigation = navigation)
-        );
+        navigation.navigate("Event", {
+          title: title,
+          description: description,
+          participants: participants,
+          slots: slots,
+          image: image,
+          place: place,
+          time: time,
+          date: date,
+          navigation: navigation,
+        });
       }}
     >
-      <Image
-        style={styles.eventImage}
-        source={{ uri: image }}
-        resizeMode="cover"
-      />
+      <Image style={styles.eventImage} source={image} resizeMode="cover" />
       <View style={styles.eventInformation}>
         <View style={styles.basicInfo}>
           <View style={styles.basicInfoLeft}>
             <View style={styles.topHorizontal}>
               <Text style={styles.eventName}>{title}</Text>
             </View>
-              <Text numberOfLines={2} >{description}</Text>
+
+            <Text numberOfLines={2}>{description}</Text>
             <View style={styles.eventDifficulty}>
               <Text style={{ paddingRight: 5 }}>
                 Available slots: {participants}/{slots}
               </Text>
             </View>
-            <Text style={{ paddingRight: 5 }}>
-                mode: {mode}
-              </Text>
           </View>
-          {isInvite ? <View style={styles.basicInfoRight}>
-            <View style={styles.topHorizontal}>
-              <Text style={styles.invite}>INVITED</Text>
-            </View>
-          </View>: null}
         </View>
         <View style={styles.eventTimeInfo}>
           <TouchableOpacity style={styles.eventTimeContainer}>
@@ -98,22 +78,11 @@ const styles = StyleSheet.create({
     width: 100 + "%",
     overflow: "hidden",
     marginBottom: 10,
-    maxHeight: 170,
-  },
-  containerInvites: {
-    borderWidth: 2,
-    borderRadius: 10,
-    borderColor: "orange",
-    flexDirection: "row",
-    width: 100 + "%",
-    overflow: "hidden",
-    marginBottom: 10,
-    maxHeight: 170,
-    // backgroundColor: "#FFD580"
+    maxHeight: 160,
   },
   eventImage: {
     flex: 3,
-    maxHeight: 170,
+    maxHeight: 160,
     maxWidth: 150,
   },
   eventInformation: {
@@ -126,12 +95,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   basicInfoRight: {
-    // justifyContent: "space-between",
-    // flexDirection: "row",
-    // alignItems: "flex-end",
-    // borderColor: "orange",
-    // borderWidth: 1,
-    maxHeight: 30
+    justifyContent: "space-between",
+    flexDirection: "row",
+    alignItems: "flex-end",
   },
   basicInfoLeft: {
     flex: 2,
@@ -177,12 +143,5 @@ const styles = StyleSheet.create({
   menuItem: {
     borderWidth: 1,
     borderColor: "lightgray",
-  },
-  invite: {
-    color: "orange",
-    borderColor: "orange",
-    borderWidth: 1,
-    padding: 3,
-    borderRadius: 10
   },
 });

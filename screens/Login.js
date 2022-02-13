@@ -15,16 +15,6 @@
  import { render } from "react-dom";
  import "firebase/compat/auth";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBjqBIeHYMRxnMgujjVf7RQIg6heduV97Y",
-  authDomain: "gamelot-98938.firebaseapp.com",
-  projectId: "gamelot-98938",
-  storageBucket: "gamelot-98938.appspot.com",
-  messagingSenderId: "1080139233082",
-  appId: "1:1080139233082:web:5556c08b3ff25d55858203",
-  measurementId: "G-XC5TG2YDC5",
-};
-
 var randomWords = require('random-words');
 
 //firebase.initializeApp(firebaseConfig);
@@ -278,7 +268,7 @@ const auth = firebase.auth();
        <View style={styles.formContainerStyle}>
          <TextInput
            label={"Email"}
-           autoCapitalize={false}
+           autoCapitalize={"none"}
            keyboardType="email-address"
            style={styles.textInputStyle}
            placeholder="Mail address"
@@ -290,7 +280,7 @@ const auth = firebase.auth();
            }}
            error={isValid}
          />
-         <TextInput label={"Password"} secureTextEntry autoCapitalize={false} style={styles.textInputStyle} selectionColor={orange} placeholder="Password" error={isValid} onChangeText={text => setPassword(text)} />
+         <TextInput label={"Password"} secureTextEntry autoCapitalize={"none"} style={styles.textInputStyle} selectionColor={orange} placeholder="Password" error={isValid} onChangeText={text => setPassword(text)} />
        </View>
        {error ? (
          <View style={styles.errorLabelContainerStyle}>
@@ -373,7 +363,7 @@ const auth = firebase.auth();
        <View style={styles.formContainerStyle}>
          <TextInput
            label={"Email"}
-           autoCapitalize={false}
+           autoCapitalize={"none"}
            keyboardType="email-address"
            style={styles.textInputStyle}
            placeholder="Mail address"
@@ -384,7 +374,7 @@ const auth = firebase.auth();
            error={isValid}
          />
  
-         <TextInput label={"Password"} secureTextEntry autoCapitalize={false} style={styles.textInputStyle} selectionColor={orange} placeholder="Password" error={isValid} onChangeText={text => setPassword(text)} />
+         <TextInput label={"Password"} secureTextEntry autoCapitalize={"none"} style={styles.textInputStyle} selectionColor={orange} placeholder="Password" error={isValid} onChangeText={text => setPassword(text)} />
        </View>
        {error ? (
          <View style={styles.errorLabelContainerStyle}>

@@ -79,7 +79,6 @@ const SettingsNavigator = () => {
 
 const CustomNavigation = () => {
   return (
-    <NavigationContainer>
       <Tab.Navigator
         initialRouteName="Home"
         screenOptions={{
@@ -98,7 +97,7 @@ const CustomNavigation = () => {
           //       size={28}
           //     />
           //   ),
-          headerTitle: "GameLot",
+          headerTitle: "APPeliotes",
           headerStyle: {
             backgroundColor: theme.colors.main,
           },
@@ -158,7 +157,6 @@ const CustomNavigation = () => {
           }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
   );
 };
 
