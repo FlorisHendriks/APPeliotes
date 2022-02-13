@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "609374989286",
+    "project_id": "appeliotes",
+    "storage_bucket": "appeliotes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609374989286:android:c02533d9024ffa84d5c427",
+        "android_client_info": {
+          "package_name": "com.appeliotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609374989286-s24b2jg04cd1hgf0cbjdf5mgvo4v2t9d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKfxveLXU9RYQ-lRz3yAazpHGvhUyKSP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609374989286-s24b2jg04cd1hgf0cbjdf5mgvo4v2t9d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
